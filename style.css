@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+  }
+  
+  :root {
+    --primary-color: #6f42c1;
+    --white: #fff;
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --gray: #808080;
+    --light-gray: #eee;
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7.5rem;
+  }
+  
+  section {
+    padding: 5rem 9%;
+  }
+  
+  .heading {
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 2rem;
+  }
+  
+  .heading::after {
+    content: '';
+    position: absolute;
+    border-bottom: 0.2rem solid var(--primary-color);
+    width: 10rem;
+    bottom: 1rem;
+    left: 50%;
+    display: inline-block;
+    margin-left: -5rem;
+  }
+  .home {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+      url('images/hero.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .home h1 {
+    color: var(--white);
+    font-size: 8rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .header.active {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .header .logo {
+    font-size: 2.5rem;
+    color: var(--white);
+    letter-spacing: 0.5rem;
+    margin-right: auto;
+  }
+  
+  .header .navbar a {
+    font-size: 2rem;
+    color: var(--white);
+    margin-left: 2rem;
+    font-weight: 300;
+  }
+  
+  .header .navbar a:hover {
+    color: var(--primary-color);
+  }
+  
+  .header .menu {
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+  }
+  .about .box-container .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  
+  .about .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: var(--gray);
+    text-overflow: none;
+  }
+  .team {
+    background-color: var(--light-gray);
+  }
+  
+  .team .box-container .box .image {
+    height: 40rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .team .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+  }
+  
+  .team .box-container .box {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .team .box-container .box .info {
+    text-align: center;
+  }
+  
+  .team .box-container .box .info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .team .box-container .box .info p {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: var(--gray);
+    transform: none;
+  }
+  
+  .team .box-container .box .image img:hover {
+    transform: scale(1.1);
+  }
+  .services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+  }
+  
+  .services .box-container .box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+  }
+  
+  .services .box-container .box:hover {
+    box-shadow: none;
+  }
+  
+  .services .box-container .box ion-icon {
+    font-size: 6rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .services .box-container .box span {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .services .box-container .box p {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: var(--gray);
+    line-height: 2;
+  }
+  .projects {
+    background-color: var(--light-gray);
+  }
+  
+  .projects .box-container .box .image {
+    position: relative;
+    overflow: hidden;
+    height: 40rem;
+  }
+  
+  .projects .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .projects .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+  }
+  
+  .projects .box-container .box .image .overlay {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-40rem);
+  }
+  
+  .projects .box-container .box .image .overlay h3 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  
+  .projects .box-container .box .image .overlay span {
+    font-size: 1.5rem;
+    color: var(--gray);
+  }
+  
+  .projects .box-container .box:hover .image .overlay {
+    transform: translateY(0);
+  }
+  .contact .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+  
+  .contact .box-container .box .form-group ion-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+  }
+  
+  .contact .box-container .box .form-group span {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+  
+  .contact .box-container .box .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .contact .box-container .box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .contact .box-container .box input {
+    border: 0.1rem solid #000;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact .box-container .box textarea {
+    border: 0.1rem solid #000;
+    padding: 1rem;
+  }
+  
+  .contact .box-container .box button {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .contact .box-container .box button:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 0.2rem solid var(--light-gray);
+  }
+  
+  .footer .socials ion-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    background-color: var(--light-gray);
+    border-radius: 50%;
+    padding: 1rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .footer .socials ion-icon:hover {
+    background-color: var(--primary-color);
+    color: var(--light-gray);
+  }
+  
+  .footer .copyright p {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 1200px) {
+    .header {
+      padding: 2rem;
+    }
+  
+    section {
+      padding: 3rem 2rem;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header .navbar {
+      position: fixed;
+      top: 7rem;
+      left: 0;
+      right: 0;
+      background-color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: var(--box-shadow);
+      transform: translateX(-90rem);
+    }
+  
+    .header .navbar.show {
+      transform: translateX(0);
+    }
+  
+    .header .menu.rotate {
+      transform: rotate(90deg);
+    }
+  
+    .header .navbar a {
+      color: #000;
+      margin: 0;
+      font-size: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  
+    .header .menu {
+      display: block;
+    }
+  
+    .home h1 {
+      font-size: 6rem;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+      font-size: 55%;
+    }
+  
+    .home h1 {
+      font-size: 4rem;
+    }
+  }
