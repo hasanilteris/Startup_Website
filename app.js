@@ -15,7 +15,6 @@ document.onscroll = () => {
     document.querySelector('.header').classList.remove('active');
   }
 };
-
 document.onload = () => {
   if (window.scrollY > 0) {
     document.querySelector('.header').classList.add('active');
