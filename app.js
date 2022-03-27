@@ -5,7 +5,6 @@ menuButton.addEventListener('click', () => {
   navbar.classList.toggle('show');
   menuButton.classList.toggle('rotate');
 });
-
 document.onscroll = () => {
   navbar.classList.remove('show');
   menuButton.classList.remove('rotate');
