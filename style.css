@@ -10,7 +10,6 @@
     text-transform: capitalize;
     transition: 0.2s linear;
   }
-  
   :root {
     --primary-color: #6f42c1;
     --white: #fff;
